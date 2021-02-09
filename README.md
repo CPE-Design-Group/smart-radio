@@ -23,3 +23,9 @@ Smart Radio
 ## Planning & Communication
 * [Discord](https://discord.com/invite/FSH88VA6)
 * [Jira](https://smart-radio.atlassian.net)
+
+## Contact Info
+
+Will Freeman - [wgf0002@uah.edu](mailto:wg0002@uah.edu)
+
+_Add your contact info here_
