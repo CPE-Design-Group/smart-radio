@@ -7,6 +7,7 @@ Smart Radio
 
 ### For Prototype
 * [DRA818V Radio Module](https://www.ebay.com/itm/DRA-818V-Semi-complete-VHF-radio-PCB-w-Low-Pass-filter-Audio-Amplifier-DRA818/202481167831?hash=item2f24d16dd7:g:~~0AAOSwJclZpA4Y)
+* [Raspberry Pi](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/)
 
 ### For Basic Development
 * [Baofeng UV-5R](amazon.com/BaoFeng-UV-5R-Dual-Radio-Black/dp/B007H4VT7A)
