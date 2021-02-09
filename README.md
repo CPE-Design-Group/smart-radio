@@ -18,8 +18,11 @@ Smart Radio
 
 ## Research
 * [APRS 101](http://www.aprs.org/doc/APRS101.PDF)
-* [RepeaterBook API](https://www.repeaterbook.com/wiki/doku.php?id=api)
 * [APRS Server Software](http://www.aprs-is.net/ServerSoftware.aspx)
+
+## Useful Websites
+* [RepeaterBook API](https://www.repeaterbook.com/wiki/doku.php?id=api) _Note: We will need to make our own DB & API_
+* [APRS.fi (view packets)](https://aprs.fi/)
 
 ## Planning & Communication
 * [Discord](https://discord.com/invite/FSH88VA6)
