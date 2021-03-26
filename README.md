@@ -1,6 +1,11 @@
 # smart-radio
 Smart Radio
 
+## Project Structure
+
+* dbTransform: used to transform and copy exported CSV files from RepeaterBook to our database
+* rpi: software running on the Raspberry Pi to control the DRA818V radio module
+
 ## Required Hardware
 
 * Linux Computer (or virtual machine)
