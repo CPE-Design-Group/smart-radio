@@ -1,6 +1,6 @@
 const UART = require("./UART");
 const gpio = require("rpi-gpio");
-const { DIR_OUT, DIR_LOW, DIR_HIGH } = require("rpi-gpio");
+const { DIR_OUT } = gpio;
 
 const DEBUG = false;
 
@@ -166,11 +166,4 @@ class DRA818V {
     }
 }
 
-const radio = new DRA818V();
-radio.connect()
-    .then(res => {
-        console.log(res);
-        radio.transmitMessage(2000);
-    })
-    .catch(e => console.error(e));
-
+module.exports = DRA818V;
