@@ -16,16 +16,24 @@ IRLP            smallint        4 digits 0-9999 takes 14 bits total
 we need to send 12 bytes
 */
 
-
 const repeater = 
+// {
+//     inputFrequency: 449.75,
+//     offset: -5,
+//     outputFrequency: 444.75,
+//     uplinkTone: 131.8,
+//     downlinkTone: 131.8,
+//     callSign: 'N4WGY',
+//     IRLP: 0
+// }
 {       
-            inputFrequency: 147.940,
-            outputFrequency: 0,
-            offset: -20,
-            upLinkTone: 186.2,
-            downLinkTone: 186.2,
-            callSign: "N4HSV",
-            IRLP: 0 
+    inputFrequency: 147.940,
+    outputFrequency: 0,
+    offset: -20,
+    uplinkTone: 186.2,
+    downlinkTone: 186.2,
+    callSign: "N4HSV",
+    IRLP: 0 
 }
 
 encodeRepeater(repeater);
@@ -194,11 +202,11 @@ function encodeRepeater(repeater)
     console.log('offset ', offset.toString(2));
 
     /*upTone*/
-    upTone = repeater.upLinkTone*10;
+    upTone = repeater.uplinkTone*10;
     console.log('upTone ', upTone.toString(2));
     
     /*downTone*/
-    downTone = repeater.downLinkTone*10;
+    downTone = repeater.downlinkTone*10;
     console.log('downTone ', downTone.toString(2));
     
     /*callSign
