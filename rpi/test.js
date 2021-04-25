@@ -1,10 +1,9 @@
-const DRA818V = require("./DRA818V");
+const APRS = require("./APRS");
 
-const radio = new DRA818V();
+const aprs = new APRS();
 
-radio.connect()
-    .then(res => {
-        console.log(res);
-        radio.transmitMessage(2000);
-    })
-    .catch(e => console.error(e));
+aprs.init().then(res => {
+    aprs.transmitPacket(process.argv[2])
+        .then(res => console.log("success"))
+        .catch(e => console.error(e));
+}).catch(e => console.log(e));
