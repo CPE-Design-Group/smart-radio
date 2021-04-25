@@ -80,7 +80,7 @@ class RepeaterCodec {
     }
 
     static encode(repeater) {
-        return Base64Endec.encode(this.encodeBin(repeater));
+        return Base64Endec.encode(this.encodeBin(this.preprocess(repeater)));
     }
 
     static decode(b64) {
@@ -91,7 +91,7 @@ class RepeaterCodec {
         // if (str.length < targetLength - bits.IRLP) str.padStart(targetLength - bits.IRLP, '0');
         // else str.padStart(targetLength, '0');
 
-        return this.decodeBin(Base64Endec.decode(b64));
+        return this.postProcess(this.decodeBin(Base64Endec.decode(b64)));
     }
 
     static encodeBin(repeater) {
@@ -152,14 +152,16 @@ class RepeaterCodec {
     }
 }
 
-const pre = RepeaterCodec.preprocess(repeater);
-const encoded = RepeaterCodec.encode(pre);
-const decoded = RepeaterCodec.decode(encoded);
-const post = RepeaterCodec.postProcess(decoded);
+module.exports = RepeaterCodec;
 
-console.log(repeater);
-console.log(post);
+// const pre = RepeaterCodec.preprocess(repeater);
+// const encoded = RepeaterCodec.encode(pre);
+// const decoded = RepeaterCodec.decode(encoded);
+// const post = RepeaterCodec.postProcess(decoded);
 
-// console.log(pre);
-// console.log(decoded);
-console.log(encoded);
+// console.log(repeater);
+// console.log(post);
+
+// // console.log(pre);
+// // console.log(decoded);
+// console.log(encoded);

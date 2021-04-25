@@ -53,27 +53,4 @@ class RepeaterDao {
     }
 }
 
-const db = new RepeaterDao();
-db.getRepeaters().then(res => {
-    const here = {
-        lat: 34.678393,
-        lng: -86.669822
-    };
-
-
-    const closest = res.reduce(
-        (closest, current) => {
-            _dist = db.distanceBetween(here, {lat: current.lat,  lng: current.lng});
-            return _dist < closest._dist ? {...current, _dist} : closest
-        },
-        {...res[0], _dist: db.distanceBetween(here, {lat: res[0].lat, lng: res[0].lng})}
-    );
-    
-    const closestStripped = pick(closest, ["inputFrequency", "outputFrequency", "uplinkTone", "downlinkTone", "callSign", "IRLP"]);
-    
-    console.log(closestStripped);
-
-    
-}).catch(e => console.error(e))
-.finally(() => db.close());
-
+module.exports = RepeaterDao;
