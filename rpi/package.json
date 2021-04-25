@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "js-base64": "^3.6.0",
     "rpi-gpio": "^2.1.7",
     "serialport": "^9.0.7"
   }

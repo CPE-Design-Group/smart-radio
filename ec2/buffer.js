@@ -58,16 +58,6 @@ class RepeaterCodec {
         return processed;
     }
 
-    // delete when finished
-    repeater = {
-        inputFrequency: 449.75,
-        outputFrequency: 444.75,
-        uplinkTone: 131.8,
-        downlinkTone: 131.8,
-        callSign: 'N4WGY',
-        IRLP: 0
-    };
-
     static postProcess({IRLP, callSign, freqFromStartOfBand, band, offsetNegative, offset, uplinkTone, downlinkTone}) {
         return { 
             inputFrequency: (freqFromStartOfBand + beg[band]) + (offset * (offsetNegative ? -1 : 1)),
