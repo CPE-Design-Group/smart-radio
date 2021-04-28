@@ -5,6 +5,7 @@ Smart Radio
 
 * dbTransform: used to transform and copy exported CSV files from RepeaterBook to our database
 * rpi: software running on the Raspberry Pi to control the DRA818V radio module
+* ec2: software running on our EC2 VM instance on AWS
 
 ## Required Hardware
 
